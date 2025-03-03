@@ -17,9 +17,9 @@ public class GatewayApplication {
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("candidat-service", r -> r.path("/mic1/candidats/**")
-                        .filters(f -> f.rewritePath("/mic1", "/Candidat"))
-                        .uri("lb://CANDIDAT")).
+                .route("Candidat",
+                        r -> r.path("/mic1/candidats/**")
+                                .uri("lb://Candidat")).
                 build();
      }
 
